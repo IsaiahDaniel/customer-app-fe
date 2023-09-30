@@ -35,13 +35,13 @@ export class AddCustomersComponent {
       address: { street: form.value.street, postCode: form.value.postCode, houseNumber: form.value.houseNumber },
       order: { amount: form.value.amount },
     };
-    this.http.post("/customers", customerData, (data: any) => {
-      if (data.success) {
-        this.isLoading = false;
-        this.showToast = true;
-        form.resetForm();
-        this.router.navigate(["/"]);
-      }
-    });
+    // this.http.post("/customers", customerData, (data: any) => {
+    //   if (data.success) {
+    //     this.isLoading = false;
+    //     this.showToast = true;
+    //     form.resetForm();
+    //     this.router.navigate(["/"]);
+    //   }
+    // });
   }
 }

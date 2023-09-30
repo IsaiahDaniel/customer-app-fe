@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
       if (data.success) {
         this.isLoading = false;
         this.customers = data.data;
+        console.log( this.customers);
       }
     });
   }

@@ -2,10 +2,10 @@
   <form
     #form="ngForm"
     (ngSubmit)="onSearch(form)"
-    class="container mx-auto flex items-center justify-between"
+    class="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between"
   >
     <div class="flex items-center">
-      <h2 class="mr-5">
+      <h2 class="mr-5 hidden md:block">
         <a routerLink="/"> Customers<span>App</span> </a>
       </h2>
       <div class="flex items-center">
@@ -24,6 +24,6 @@
       </div>
     </div>
 
-    <a routerLink="/customers/add" class="btn">Add Customer</a>
+    <a routerLink="/customers/add" class="btn mt-2 md:mt-0">Add Customer</a>
   </form>
 </header>
