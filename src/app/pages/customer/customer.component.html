@@ -1,0 +1,85 @@
+<div class="w-[60%] mx-auto">
+    <div class="bg-yellow-500" *ngIf="editSuccess">
+        Edited Successs
+    </div>
+  <div class="flex items-center justify-between">
+    <div>
+      <h2 class="text-2xl">{{ customer.name }}</h2>
+      <p>Age: {{ customer.age }}</p>
+      <p>Gender: {{ customer.gender }}</p>
+    </div>
+
+    <div class="space-x-5 cursor-pointer flex">
+      <div (click)="toggleEditForm()">
+        <mat-icon>edit</mat-icon>
+      </div>
+      <div (click)="deleteCustomer()">
+        <mat-icon>delete</mat-icon>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-10">
+    <h2 class="text-2xl">Orders</h2>
+    <div *ngFor="let order of customer.orders">
+      <h2>Amount: {{ order.amount }}</h2>
+      <h2>Order Date: {{ order.date }}</h2>
+    </div>
+  </div>
+</div>
+
+<br />
+<hr />
+
+<div class="mt-10" *ngIf="showEdit">
+    <form #f="ngForm" (ngSubmit)="editCustomer(f)" class="w-[60%] mx-auto">
+        <h2 class="text-3xl">Edit information</h2>
+      
+        <div>
+          <mat-label>Name</mat-label>
+          <mat-form-field>
+            <input matInput placeholder="Isaiah" name="name" [(ngModel)]="customer.name" required />
+          </mat-form-field>
+        </div>
+      
+        <div>
+          <mat-label>Age</mat-label>
+          <mat-form-field>
+            <input matInput placeholder="24" name="age" [(ngModel)]="customer.age" required />
+          </mat-form-field>
+        </div>
+      
+        <div>
+          <mat-label>Gender</mat-label>
+          <mat-form-field>
+            <input matInput placeholder="male" name="gender" [(ngModel)]="customer.gender" required />
+          </mat-form-field>
+        </div>
+      
+        <div>
+          <mat-label>Street</mat-label>
+          <mat-form-field>
+            <input matInput placeholder="1st main street" name="street" [(ngModel)]="customer.address[0].street" required />
+          </mat-form-field>
+        </div>
+      
+        <div>
+          <mat-label>houseNumber</mat-label>
+          <mat-form-field>
+            <input matInput placeholder="36" name="houseNumber" [(ngModel)]="customer.address[0].houseNumber" required />
+          </mat-form-field>
+        </div>
+      
+        <div>
+          <mat-label>Order Amount</mat-label>
+          <mat-form-field>
+            <input matInput placeholder="5000" name="amount" [(ngModel)]="customer.orders[0].amount" required />
+          </mat-form-field>
+        </div>
+      
+        <div>
+          <button class="btn" type="submit">Submit</button>
+        </div>
+      </form>
+      
+</div>

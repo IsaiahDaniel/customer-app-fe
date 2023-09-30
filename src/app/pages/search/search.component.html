@@ -1,0 +1,15 @@
+<div class="w-[60%] mx-auto">
+  <div>
+    <h2 class="text-2xl">{{ customer.name }}</h2>
+    <p>Age: {{ customer.age }}</p>
+    <p>Gender: {{ customer.gender }}</p>
+  </div>
+
+  <div class="mt-10">
+    <h2 class="text-2xl">Orders</h2>
+    <div *ngFor="let order of customer.orders">
+      <h2>Amount: {{ order.amount }}</h2>
+      <h2>Order Date: {{ order.date }}</h2>
+    </div>
+  </div>
+</div>

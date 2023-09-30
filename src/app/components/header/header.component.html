@@ -1,0 +1,29 @@
+<header class="shadow-md p-4">
+  <form
+    #form="ngForm"
+    (ngSubmit)="onSearch(form)"
+    class="container mx-auto flex items-center justify-between"
+  >
+    <div class="flex items-center">
+      <h2 class="mr-5">
+        <a routerLink="/"> Customers<span>App</span> </a>
+      </h2>
+      <div class="flex items-center">
+        <div>
+          <input
+            type="text"
+            class="p-5 border rounded w-[400px]"
+            placeholder="Search by name.."
+            name="search"
+            [(ngModel)]="name"
+          />
+        </div>
+        <button class="bg-[#3f51b5] p-5 text-white rounded-tr rounded-br">
+          Search
+        </button>
+      </div>
+    </div>
+
+    <a routerLink="/customers/add" class="btn">Add Customer</a>
+  </form>
+</header>

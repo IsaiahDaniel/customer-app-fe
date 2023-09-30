@@ -1,0 +1,90 @@
+<form #f="ngForm" (ngSubmit)="addCustomer(f)" class="w-[60%] mx-auto">
+  <div>
+    <mat-label>Name</mat-label>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Isaiah"
+        name="name"
+        ngModel
+        #name="ngModel"
+        required
+      />
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-label>Age</mat-label>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="24"
+        name="age"
+        ngModel
+        #age="ngModel"
+        required
+      />
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-label>Gender</mat-label>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="male"
+        name="gender"
+        ngModel
+        #gender="ngModel"
+        required
+      />
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-label>Street</mat-label>
+    <mat-form-field>
+      <input
+        matInput
+        ngModel
+        #street="ngModel"
+        required
+        name="street"
+        placeholder="1st main street"
+      />
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-label>houseNumber</mat-label>
+    <mat-form-field>
+      <input
+        matInput
+        ngModel
+        #houseNumber="ngModel"
+        required
+        name="houseNumber"
+        placeholder="36"
+      />
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-label>order amount</mat-label>
+    <mat-form-field>
+      <input
+        matInput
+        houseNumber
+        ngModel
+        #houseNumber="ngModel"
+        required
+        name="amount"
+        placeholder="36"
+      />
+    </mat-form-field>
+  </div>
+
+  <div>
+    <button class="btn" type="submit">Submit</button>
+  </div>
+</form>
