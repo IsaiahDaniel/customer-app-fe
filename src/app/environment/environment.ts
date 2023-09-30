@@ -4,5 +4,6 @@
 
 export const environment = {
   production: false,
-  apiEndPoint: "http://localhost:5000",
+  // apiEndPoint: "http://localhost:5000",
+  apiEndPoint: "https://customer-app-be.onrender.com"
 };
